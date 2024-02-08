@@ -1,0 +1,703 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b8afaf;
+    color: #333;
+}
+
+header {
+    background-color: #1e201e;
+    color: rgb(192, 190, 190);
+    padding: 1em 0;
+}
+
+
+nav {
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    margin-top: px;
+    background-color: #1e201e;
+    transition: top 0.3s; /* Add a smooth transition effect */
+    padding: 10px;
+    top: 0;
+    z-index: 1000;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;
+    z-index: 1000;
+    
+}
+#nav ul.open {
+    display: flex;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+#nav ul a.active {
+    color: #81c784; /* Change this to the desired color for the active link */
+    font-weight: bold; /* Add any additional styling for the active link */
+    /* Add any other styles you want for the active link */
+}
+
+
+
+
+nav a:hover {
+    color: #81c784;
+}
+
+main {
+    padding: 20px 0;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 1em 0;
+    width: 100%;
+    text-align: center;
+}
+.container {
+    max-width: 800px;
+    margin:  auto;
+    height: 5%; /* Default height */
+    box-sizing: border-box; /* Ensure padding and border don't affect the overall height */
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        height: 50%; /* Height for devices with a maximum width of 600px */
+    }
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product {
+    display: inline-block;
+    width: 30%; /* Adjust the width as needed */
+    margin: 10px 1%; /* Add a small margin between products */
+    text-align: center; /* Center-align the content within each product block */
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+@media (max-width: 768px) {
+    .product {
+        width: 100%; /* Make each product take up the full width on smaller screens */
+    }
+}
+
+
+
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.reg {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 600px) {
+    .product {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .product img {
+        border-radius: 4px;
+    }
+
+    .product h2 {
+        font-size: 1.2em;
+    }
+
+    .product p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+
+.about-container img,
+.login-container img {
+    width: 100%;
+    height: auto;
+    
+}
+img {
+    width: 100%;
+    height: auto;
+}
+main {
+    padding: 20px;
+    margin-bottom: 60px; /* Adjust the value as needed */
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+/* Adjusted CSS for slideshow controls and dots */
+
+/* Adjusted CSS for slideshow controls and dots */
+
+.slideshow-container {
+    position: relative;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .dot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    margin: 0 8px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Adjusted CSS for responsive button and dot positioning */
+  
+  @media screen and (max-width: 600px) {
+    .prev, .next {
+      font-size: 16px;
+    }
+  
+    .dot {
+      position: static;
+      transform: none;
+      margin: 0 4px;
+    }
+  }
+  
+  @media screen and (min-width: 600px) {
+    body {
+      margin: 4em; /* Adjust the margin value as needed */
+      margin-top: 0%;
+      margin-bottom: 0%;
+    }
+  }
+  
+  form {
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    
+  }
+  /* Services section styles */
+#services {
+    background-color: #f5f5f5;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#services h2 {
+    color: #86c7a4;
+    margin-bottom: 20px;
+}
+
+#services p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#services li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#services li:before {
+    content: '\2022';
+    color: #86c7a4;
+    position: absolute;
+    left: 0;
+}
+
+/* Add this style to your existing CSS or adjust accordingly */
+.slideshow {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: relative;
+    display: inline-block;
+}
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+/* Default font size */
+.para {
+    font-size: 16px;
+}
+
+/* Font size for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+    .para {
+        font-size: 14px;
+    }
+}
+.container2 {
+    text-align: center; /* Center-align the search bar */
+    margin-bottom: 20px; /* Add some space between the search bar and products */
+}
+#searchInput {
+    padding: 10px;
+    width: 57%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Add this to your existing CSS file or create a new one */
+
+/* Slideshow fade animation */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    animation: fadeIn 1.5s ease-in-out;
+}
+.container2 {
+    background-color: #1e201e;
+    color: white;
+    padding: 10px 20px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Introduction section fade-in animation */
+#introduction, #services, #featured-products {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Landscape Developer header fade-in animation */
+header h1, header p, #slideshow2 img {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Featured Products button fade-in animation */
+#featured-products button {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+
+
+
+#contact {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.contact-details,
+.social-media-icons {
+    flex: 1;
+}
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Adjust the gap between social media icons */
+}
+
+.social-media-icons a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-media-icons img {
+    width: 70px; /* Adjust the size of the social media icons */
+    height: auto;
+}
+@media screen and (max-width: 600px) {
+    .content {
+        flex-direction: column;
+    }
+
+    
+
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media-icons {
+        margin-top: 10px;
+        
+    }
+
+    .contact-details,
+    .social-media-icons {
+        max-width: none;
+    }
+}
+
+
+/* Style pagination buttons */
+#pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust the spacing as needed */
+    margin-top: 65px; /* Adjust the margin-top value to push them down */
+}
+
+#pagination button {
+    padding: 10px 15px; /* Adjust the padding for larger buttons */
+    font-size: 20px;   /* Adjust the font size if needed */
+}
+
+/* Media query for larger screens (PC) */
+@media screen and (min-width: 768px) {
+    #pagination button {
+        padding: 10px 30px; /* Increase the padding further for larger screens */
+        font-size: 25px;   /* Increase the font size further if needed */
+    }
+
+    #pagination {
+        margin-top: 0; /* Remove the top margin for larger screens */
+    }
+}
+#enroll-now {
+    text-align: center;
+    background-color: #0c0c0c;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 30px;
+}
+
+
+/* Add this to your existing CSS file or create a new one */
+
+/* Login button styles */
+#login-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above other elements */
+}
+/* Add this to your CSS file or in a style tag within your HTML */
+
+/* Add this to your CSS file or in a style tag within your HTML */
+
+#login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #141414; /* Adjust the background color as needed */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it appears above other elements */
+    width: 70%; /* Set the width to cover 60% of the viewport */
+}
+
+
+#login-form label {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+/* Add this to your CSS file or in a style tag within your HTML */
+
+@media screen and (min-width: 768px) {
+    #login-form {
+        width: 40%;
+        
+    }
+}
+
+/* Add this to your CSS file or in a style tag within your HTML */
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(184, 175, 175, 0.3); /* Set the desired color with opacity */
+    z-index: 1002; /* Set a z-index higher than your other elements */
+}
+#login-form {
+    position: absolute; /* Adjust positioning as needed */
+    display: none;
+    /* Add any other styles you need for the login form */
+}
+
+  
+  .title {
+    text-align: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    margin: 10px 0 30px 0;
+    font-size: 28px;
+    font-weight: 800;
+  }
+  
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .input {
+    border-radius: 20px;
+    border: 1px solid #c0c0c0;
+    outline: 0 !important;
+    box-sizing: border-box;
+    padding: 12px 15px;
+  }
+  
+  .page-link {
+    text-decoration: underline;
+    margin: 0;
+    text-align: end;
+    color: #747474;
+    text-decoration-color: #747474;
+  }
+  
+  .page-link-label {
+    cursor: pointer;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  
+  .page-link-label:hover {
+    color: #ffffff;
+  }
+  
+  .form-btn {
+    padding: 10px 15px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    border: 0 !important;
+    outline: 0 !important;
+    background: teal;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .form-btn:active {
+    box-shadow: none;
+  }
+  
+  .sign-up-label {
+    margin: 0;
+    font-size: 10px;
+    color: #747474;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .sign-up-link {
+    margin-left: 1px;
+    font-size: 11px;
+    text-decoration: underline;
+    text-decoration-color: teal;
+    color: teal;
+    cursor: pointer;
+    font-weight: 800;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 15px;
+  }
+  
+  .apple-login-button,
+      .google-login-button {
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    gap: 5px;
+  }
+  
+  .apple-login-button {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+  }
+  
+  .google-login-button {
+    border: 2px solid #747474;
+  }
+  
+  .apple-icon,
+      .google-icon {
+    font-size: 18px;
+    margin-bottom: 1px;
+  }
+  #nav.open {
+    z-index: 1;
+}

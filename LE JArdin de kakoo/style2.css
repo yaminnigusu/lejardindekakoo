@@ -1,0 +1,696 @@
+
+nav {
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+    background-color: #1e201e;
+    transition: top 0.3s; /* Add a smooth transition effect */
+    padding: 10px;
+    top: 0;
+    z-index: 1000;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;
+    z-index: 1000;
+}
+
+#nav ul.open {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+#nav ul a.active {
+    color: #81c784; /* Change this to the desired color for the active link */
+    font-weight: bold; /* Add any additional styling for the active link */
+    /* Add any other styles you want for the active link */
+}
+
+nav a:hover {
+    color: #81c784;
+}
+
+main {
+    padding: 20px 0;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 1em 0;
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    height: 5%; /* Default height */
+    box-sizing: border-box; /* Ensure padding and border don't affect the overall height */
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        height: 50%; /* Height for devices with a maximum width of 600px */
+    }
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product {
+    display: inline-block;
+    width: 30%; /* Adjust the width as needed */
+    margin: 10px 1%; /* Add a small margin between products */
+    text-align: center; /* Center-align the content within each product block */
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: 100%; /* Make each product take up the full width on smaller screens */
+    }
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.reg {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media only screen and (max-width: 600px) {
+    .product {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .product img {
+        border-radius: 4px;
+    }
+
+    .product h2 {
+        font-size: 1.2em;
+    }
+
+    .product p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+.about-container img,
+.login-container img {
+    width: 100%;
+    height: auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    padding: 20px;
+    margin-bottom: 60px; /* Adjust the value as needed */
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Adjusted CSS for slideshow controls and dots */
+.slideshow-container {
+    position: relative;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.dot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    margin: 0 8px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Adjusted CSS for responsive button and dot positioning */
+@media screen and (max-width: 600px) {
+    .prev, .next {
+        font-size: 16px;
+    }
+
+    .dot {
+        position: static;
+        transform: none;
+        margin: 0 4px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        margin: 4em; /* Adjust the margin value as needed */
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Services section styles */
+#services {
+    background-color: #f5f5f5;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#services h2 {
+    color: #86c7a4;
+    margin-bottom: 20px;
+}
+
+#services p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#services li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#services li:before {
+    content: '\2022';
+    color: #86c7a4;
+    position: absolute;
+    left: 0;
+}
+
+/* Add this style to your existing CSS or adjust accordingly */
+.slideshow {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: relative;
+    display: inline-block;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Default font size */
+.para {
+    font-size: 16px;
+}
+
+/* Font size for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+    .para {
+        font-size: 14px;
+    }
+}
+
+.container2 {
+    text-align: center; /* Center-align the search bar */
+    margin-bottom: 20px; /* Add some space between the search bar and products */
+}
+
+#searchInput {
+    padding: 10px;
+    width: 57%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add this to your existing CSS file or create a new one */
+
+/* Slideshow fade animation */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.container2 {
+    background-color: #1e201e;
+    color: white;
+    padding: 10px 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Introduction section fade-in animation */
+#introduction,
+#services,
+#featured-products {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Landscape Developer header fade-in animation */
+header h1,
+header p,
+#slideshow2 img {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Featured Products button fade-in animation */
+#featured-products button {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+#contact {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-details,
+.social-media-icons {
+    flex: 1;
+}
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Adjust the gap between social media icons */
+}
+
+.social-media-icons a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-media-icons img {
+    width: 70px; /* Adjust the size of the social media icons */
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media-icons {
+        margin-top: 10px;
+    }
+
+    .contact-details,
+    .social-media-icons {
+        max-width: none;
+    }
+}
+
+/* Style pagination buttons */
+#pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust the spacing as needed */
+    margin-top: 65px; /* Adjust the margin-top value to push them down */
+}
+
+#pagination button {
+    padding: 10px 15px; /* Adjust the padding for larger buttons */
+    font-size: 20px; /* Adjust the font size if needed */
+}
+
+/* Media query for larger screens (PC) */
+@media screen and (min-width: 768px) {
+    #pagination button {
+        padding: 10px 30px; /* Increase the padding further for larger screens */
+        font-size: 25px; /* Increase the font size further if needed */
+    }
+
+    #pagination {
+        margin-top: 0; /* Remove the top margin for larger screens */
+    }
+}
+
+#enroll-now {
+    text-align: center;
+    background-color: #0c0c0c;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 30px;
+}
+
+#header {
+    text-align: center;
+    background-color: #1e201e;
+    color: white;
+    padding: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #b8afaf;
+    color: #b8c7b8;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: margin-top 0.3s;
+    margin-top: 25px;
+}
+
+#nav.sticky ul {
+    margin-top: 10px;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: underline;
+    color: #fff;
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+#vegetable .content {
+    flex-direction: row-reverse;
+}
+
+img {
+    width: 50%;
+    height: auto;
+    max-width: 50%;
+    margin-right: 10px;
+}
+
+.text {
+    flex: 1;
+}
+
+#contact {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-details,
+.social-media-icons {
+    flex: 1;
+}
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-media-icons a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-media-icons img {
+    width: 70px;
+    height: auto;
+}
+
+#nav-toggle.sticky {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    padding: 10px;
+    z-index: 1000;
+    top: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        flex-direction: column;
+    }
+
+    #vegetable .content {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media-icons {
+        margin-top: 10px;
+    }
+
+    .contact-details,
+    .social-media-icons {
+        max-width: none;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    #nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #nav li {
+        margin: 10px 0;
+        display: block;
+        text-align: center;
+    }
+
+    #nav-toggle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        width: 100%;
+        box-sizing: border-box;
+        outline: none;
+        padding: 5px;
+    }
+
+    #nav-toggle.sticky {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    #nav-toggle {
+        display: none;
+    }
+
+    .toggle-mobile {
+        display: none;
+    }
+}
+
+/* Your existing CSS styles */
+
+/* Add this style for the fullscreen modal */
+#fullscreen-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#fullscreenImage {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* ... (rest of your CSS styles) ... */
+
+body.modal-open #nav {
+    display: none;
+}
